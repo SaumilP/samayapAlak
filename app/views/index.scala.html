@@ -1,7 +1,20 @@
-@(message: String)
+@main(null){
 
-@main("Welcome to Play") {
+@if( flash.containsKey("error")) {
 
-    @play20.welcome(message, style = "Java")
+<div class="alert-message error">
+    <p>
+        <strong>Oops!</strong> @flash.get("error")
+    </p>
+</div>
+
+}
+
+<div class="alert-message block-message info">
+    <p>
+        <strong>Timer Application</strong>
+        To start, Choose a username and SignIn using from top right form.
+    </p>
+</div>
 
 }
