@@ -17,8 +17,14 @@ import static play.libs.Json.toJson;
 
 public class Application extends Controller {
 
+    static Form<Timer> timerForm = Form.form(Timer.class);
+
     public static Result index() {
-        return ok(views.html.index.render(Form.form(Timer.class)));
+        return redirect( routes.Application.timers() );
+    }
+
+    public static Result timers() {
+        return redirect( routes.Application.timers());
     }
 
     @Transactional
