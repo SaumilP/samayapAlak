@@ -4,8 +4,9 @@
 
 # Home page
 GET     /                           controllers.Application.index()
-GET     /timers                     controllers.Application.getAllTimers()
-POST    /timers                     controllers.Application.addTimer()
+GET     /timers                     controllers.TimerApplication.getAllTimers()
+POST    /timers                     controllers.TimerApplication.addTimer()
+# POST    /user                       controllers.AccountApplication.registerUser()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

@@ -1,113 +1,160 @@
-html, body {
-    background-color: #eee;
-}
+
 body {
-    padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
-}
-.container > footer p {
-    text-align: center; /* center align it with the container */
-}
-.container {
-    width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+  background-color: #f2f2f2;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    padding-top: 50px;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
 }
 
-/* The white background content wrapper */
-.content {
-    background-color: #fff;
-    padding: 20px;
-    margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
-    -webkit-border-radius: 0 0 6px 6px;
-    -moz-border-radius: 0 0 6px 6px;
-    border-radius: 0 0 6px 6px;
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-    box-shadow: 0 1px 2px rgba(0,0,0,.15);
-    min-height: 10px;
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway";
+    font-weight: 300;
+    color: #333;
 }
 
-/* Page header tweaks */
-.page-header {
-    background-color: #f5f5f5;
-    padding: 20px 20px 10px;
-    margin: -20px -20px 20px;
+
+/* Paragraph & Typographic */
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
 }
 
-/* Styles you shouldn't keep as they are for displaying this base example only */
-.content .span10,
-.content .span4 {
-    min-height: 500px;
+.centered {
+    text-align: center;
 }
 
-/* Give a quick and non-cross-browser friendly divider */
-.content .span4 {
-    padding-left: 9px;
-    margin-left: 10px;
-    border-left: 1px solid #eee;
+/* Links */
+a {
+    color: #3bc492;
+    word-wrap: break-word;
+
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-.topbar .btn {
+a:hover,
+a:focus {
+    color: #c0392b;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+ hr {
+    display: block;
+    height: 1px;
     border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
-.topbar p {
-    color: #888;
+
+/* ==========================================================================
+   Wrap Sections
+   ========================================================================== */
+
+#headerwrap {
+	background-color: #34495e;
+	padding-top: 60px;
 }
 
-#username {
-    width: 200px;
+#headerwrap h1 {
+	margin-top: 30px;
+	color: white;
+	font-size: 70px;
+	
 }
 
-#main {
-    position: relative;
-    overflow: hidden;
+#headerwrap h3 {
+	color: white;
+	font-size: 30px;
 }
 
-#onError, #onChat {
-    display: none;
+#headerwrap h5 {
+	color: white;
+	font-weight: 700;
+	text-align: left;
 }
 
-#messages {
-    position: absolute;
-    bottom: 60px;
+#headerwrap p {
+	text-align: left;
+	color: white
 }
 
-#talk {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: auto;
-    height: 40px
+/* intro Wrap */
+
+#intro {
+	padding-top: 50px;
+	border-top: #bdc3c7 solid 5px;
 }
 
-.message {
-    padding: 4px 0;
-    border-bottom: 1px solid #eee;
-    position: relative;
+#features {
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
-.message span {
-    width: 70px;
-    overflow: hidden;
-    text-align: right;
-    font-weight: bold;
-    margin-right: 5px;
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-    top: -1px;
+#features .ac a{
+	font-size: 20px;
 }
 
-.message p {
-    display: inline-block;
-    margin: 0;
-    width: 500px;
+/* Showcase Wrap */
+
+#showcase {
+	display: block;
+	background-color: #34495e;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
-.message.me {
-    background: #FFC;
+#showcase h1 {
+	color: white;
 }
 
-.message.join, .message.quit {
-    background: #D9E7FB;
+#footerwrap {
+	background-color: #2f2f2f;
+	color: white;
+	padding-top: 40px;
+	padding-bottom: 60px;
+	text-align: left;
 }
+
+#footerwrap h3 {
+	font-size: 28px;
+	color: white;
+}
+
+#footerwrap p {
+	color: white;
+	font-size: 18px;
+}
+
+/* Copyright Wrap */
+
+#c {
+	background: #222222;
+	padding-top: 15px;
+	text-align: right;
+}
+
+#c p {
+	color: white
+}
+

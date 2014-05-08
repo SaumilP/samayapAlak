@@ -1,0 +1,12 @@
+@(myForm: play.data.Form[models.Timer])
+
+@main("samayapAlak"){
+<script src='@routes.Assets.at("javascript/index.min.js")' type="text/javascript"></script>
+
+<ul id="timers"></ul>
+
+@helper.form(action=routes.TimerApplication.addTimer) {
+@helper.inputText(myForm("taskName"))
+<input type="submit" value="Submit" />
+}
+}
