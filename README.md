@@ -2,7 +2,7 @@
 
 > Application to allow user to track activity timing. Everytime user works on different task, new task needs to be added and timer needs to be adjusted.
 
-Build Status: Non-Compiling
+Build Status: Compiling
 
 ## Requirements
 * JDK 1.6+
@@ -14,7 +14,6 @@ Build Status: Non-Compiling
 
 ## Feature List
 * MySQL Integration
-* Logging activity
 * Activity Report Graphs
 * Dashboard Design
 * JS Timer

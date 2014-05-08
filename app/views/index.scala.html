@@ -1,20 +1,12 @@
-@main(null){
+@(myForm: play.data.Form[models.Timer])
 
-@if( flash.containsKey("error")) {
+@main("samayapAlak"){
+    <script src='@routes.Assets.at("javascript/index.min.js")' type="text/javascript"></script>
 
-<div class="alert-message error">
-    <p>
-        <strong>Oops!</strong> @flash.get("error")
-    </p>
-</div>
+    <ul id="timers"></ul>
 
-}
-
-<div class="alert-message block-message info">
-    <p>
-        <strong>Timer Application</strong>
-        To start, Choose a username and SignIn using from top right form.
-    </p>
-</div>
-
+    @helper.form(action=routes.Application.addTimer) {
+        @helper.inputText(myForm("taskName"))
+        <input type="submit" value="Submit" />
+    }
 }
