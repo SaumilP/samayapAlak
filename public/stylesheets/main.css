@@ -158,3 +158,15 @@ a:after {
 	color: white
 }
 
+p.note {
+    margin: 10px auto 0;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    color: #445868;
+    text-shadow: 1px 1px rgba(255,255,255,.6)
+}
+
+p.note.em {
+    font-weight: bold;
+}

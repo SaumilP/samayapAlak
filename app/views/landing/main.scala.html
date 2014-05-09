@@ -1,6 +1,5 @@
 @(title: String)(content: Html)
 
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -8,7 +7,7 @@
     <meta name="description" content="SamayaPalak - Time Keeper">
     <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
 
-    <title>@title - A simple Task Timer</title>
+    <title>SamayaPalak - A simple Task Timer</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
@@ -19,9 +18,8 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
-    <script type="text/javascript" src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
-    <script type="text/javascript" src='@routes.Assets.at("smoothscroll.js")'></script>
-
+    <script type="text/javascript" src='@routes.Assets.at("javascript/jquery-1.9.0.min.js")'></script>
+    <script type="text/javascript" src='@routes.Assets.at("javascript/smoothscroll.js")'></script>
 </head>
 <body data-spy="scroll" data-offset="0" data-target="#navigation">
 
@@ -61,14 +59,14 @@
             <div class="col-lg-2">
                 <h5>Amazing Results</h5>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <img class="hidden-xs hidden-sm hidden-md" src="assets/img/arrow1.png">
+                <img class="hidden-xs hidden-sm hidden-md" src="@routes.Assets.at("images/arrow1.png")">
             </div>
             <div class="col-lg-8">
-                <img class="img-responsive" src="assets/img/app-bg.png" alt="">
+                <img class="img-responsive" src="@routes.Assets.at("images/app-bg.png")" alt="">
             </div>
             <div class="col-lg-2">
                 <br>
-                <img class="hidden-xs hidden-sm hidden-md" src="assets/img/arrow2.png">
+                <img class="hidden-xs hidden-sm hidden-md" src="@routes.Assets.at("images/arrow2.png")">
                 <h5>Awesome Design</h5>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
@@ -86,17 +84,17 @@
             <br>
             <br>
             <div class="col-lg-4">
-                <img src="assets/img/intro01.png" alt="">
+                <img src="@routes.Assets.at("images/intro01.png")" alt="">
                 <h3>Community</h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
             <div class="col-lg-4">
-                <img src="assets/img/intro02.png" alt="">
+                <img src="@routes.Assets.at("images/intro02.png")" alt="">
                 <h3>Schedule</h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
             <div class="col-lg-4">
-                <img src="assets/img/intro03.png" alt="">
+                <img src="@routes.Assets.at("images/intro03.png")" alt="">
                 <h3>Monitoring</h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
@@ -114,7 +112,7 @@
             <br>
             <br>
             <div class="col-lg-6 centered">
-                <img class="centered" src="assets/img/mobile.png" alt="">
+                <img class="centered" src="@routes.Assets.at("images/mobile.png")" alt="">
             </div>
 
             <div class="col-lg-6">
@@ -183,7 +181,6 @@
     </div><!--/ .container -->
 </div><!--/ #features -->
 
-
 <section id="showcase" name="showcase"></section>
 <div id="showcase">
     <div class="container">
@@ -201,10 +198,10 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="assets/img/item-01.png" alt="">
+                            <img src="@routes.Assets.at("images/item-01.png")" alt="">
                         </div>
                         <div class="item">
-                            <img src="assets/img/item-02.png" alt="">
+                            <img src="@routes.Assets.at("images/item-02.png")" alt="">
                         </div>
                     </div>
                 </div>
@@ -222,10 +219,10 @@
         <div class="col-lg-5">
             <h3>Address</h3>
             <p>
-                Av. Greenville 987,<br/>
-                New York,<br/>
-                90873<br/>
-                United States
+                16 Clerance Avenue,<br/>
+                Craighall Park,<br/>
+                Johannesburg - 3196<br/>
+                South Africa
             </p>
         </div>
 
@@ -253,15 +250,13 @@
 </div>
 <div id="c">
     <div class="container">
-        <p>Created by <a href="http://www.blacktie.co">BLACKTIE.CO</a></p>
+        <!--<p>Created by <a href="http://www.blacktie.co">BLACKTIE.CO</a></p>-->
+        @content
     </div>
 </div>
 
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="assets/js/bootstrap.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src='@routes.Assets.at("javascripts/bootstrap.js")'></script>
 <script>
     $('.carousel').carousel({
         interval: 3500

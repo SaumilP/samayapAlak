@@ -17,3 +17,6 @@ Build Status: Compiling
 * Activity Report Graphs
 * Dashboard Design
 * JS Timer
+* Landing page ( code added but not showing content )
+* Login page ( controller + Model added - testing remaining )
+* Sign Up page ( controller + Model + MailChimp added  - Testing remaining)

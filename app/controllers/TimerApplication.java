@@ -32,7 +32,7 @@ public class TimerApplication extends Controller {
         if ( Logger.isDebugEnabled() ){
             Logger.debug("Timer[" + timer.id + "] added to database.");
         }
-        return redirect(controllers.routes.Application.index());
+        return redirect(controllers.routes.TimerApplication.getAllTimers());
     }
 
     @Transactional(readOnly = true)

@@ -1,29 +1,60 @@
-@(login: String)(content: Html)
+@(form: Form[AccountApplication.Login])
 
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
-    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
-    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SamayaPalak - Time Keeper">
     <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+
+    <title>Login - SamayaPalak</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/login.css")">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
     <script type="text/javascript" src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
-    <style>
-        body{
-            margin-top: 50px;
-        }
-    </style>
 </head>
 <body>
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container-fluid">
-            <a id="titleLink" class="brand" href="/">test</a>
-        </div>
-    </div>
-</div>
-<div class="container">
-    @content
-</div>
+    <header>
+        <a href="@routes.HomeApplication.index" id="logo">
+            <span>Samay</span>Palak
+        </a>
+    </header>
+
+    @helper.form(routes.AccountApplication.authenticate) {
+        <h1>Sign In</h1>
+
+        @if(form.hasGlobalErrors) {
+            <p class="has-error">
+                @form.globalError.message
+            </p>
+        }
+
+        @if(flash.contains("success")) {
+            <p class="has-success">
+                @flash.get("success")
+            </p>
+        }
+
+        <p>
+            <input type="email" name="email" placeholder="Email" value="@form("email").value">
+        </p>
+        <p>
+            <input type="password" name="password" placeholder="Password" >
+        </p>
+        <p>
+            <button type="submit">Login</button>
+        </p>
+
+        <p class="note">
+            Try <em>user@@sample.com</em> with <em>secret</em> as password.
+        </p>
+    }
 </body>
 </html>
