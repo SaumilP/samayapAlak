@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SamayaPalak - Time Keeper">
-    <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    <link rel="shortcut icon" href='@routes.Assets.at("images/favicon.png")'>
 
     <title>SamayaPalak - A simple Task Timer</title>
 
@@ -18,8 +18,8 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
-    <script type="text/javascript" src='@routes.Assets.at("javascript/jquery-1.9.0.min.js")'></script>
-    <script type="text/javascript" src='@routes.Assets.at("javascript/smoothscroll.js")'></script>
+    <script type="text/javascript" src='@routes.Assets.at("javascripts/jquery-1.9.0.min.js")'></script>
+    <script type="text/javascript" src='@routes.Assets.at("javascripts/smoothscroll.js")'></script>
 </head>
 <body data-spy="scroll" data-offset="0" data-target="#navigation">
 
@@ -27,19 +27,26 @@
 <div id="navigation" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
+            <img alt="SamayaPalak" src="@routes.Assets.at("images/favicon.png")" width="50" style="float: left; padding: 10px 10px;"/>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><b>Pratt</b></a>
+            <a class="navbar-brand" href="#"><b>SamayaPalak</b></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#home" class="smothscroll">Home</a></li>
-                <li><a href="#desc" class="smothscroll">Description</a></li>
+                <li><a href="#desc" class="smothscroll">Features</a></li>
                 <li><a href="#showcase" class="smothScroll">Showcase</a></li>
                 <li><a href="#contact" class="smothScroll">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#signup" class="smothScroll"><b>Sign Up</b></a></li>
+                <li><a href="#login" class="smothScroll"><b>Log In</b></a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -51,14 +58,14 @@
     <div class="container">
         <div class="row centered">
             <div class="col-lg-12">
-                <h1>Welcome To <b>Pratt</b></h1>
-                <h3>Show your product with this handsome theme.</h3>
+                <h1><b>SamayaPalak</b></h1>
+                <h3>Efficient Time Tracking for people with better things to do</h3>
                 <br>
             </div>
 
             <div class="col-lg-2">
-                <h5>Amazing Results</h5>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <h5>Task Dashboard</h5>
+                <p>A well designed user dashboard providing all the task related information in minutes.</p>
                 <img class="hidden-xs hidden-sm hidden-md" src="@routes.Assets.at("images/arrow1.png")">
             </div>
             <div class="col-lg-8">
@@ -67,8 +74,8 @@
             <div class="col-lg-2">
                 <br>
                 <img class="hidden-xs hidden-sm hidden-md" src="@routes.Assets.at("images/arrow2.png")">
-                <h5>Awesome Design</h5>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <h5>Fluid Design</h5>
+                <p>Site designed to boost your productivity.</p>
             </div>
         </div>
     </div> <!--/ .container -->
@@ -84,19 +91,19 @@
             <br>
             <br>
             <div class="col-lg-4">
-                <img src="@routes.Assets.at("images/intro01.png")" alt="">
-                <h3>Community</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <img src="@routes.Assets.at("images/intro02.png")" alt="">
+                <h3>Single Click</h3>
+                <p>Single click to start Task timer, enabling you to focus more on task then task-tracking.</p>
             </div>
             <div class="col-lg-4">
-                <img src="@routes.Assets.at("images/intro02.png")" alt="">
-                <h3>Schedule</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <img src="@routes.Assets.at("images/intro01.png")" alt="">
+                <h3>Analytics</h3>
+                <p>On the fly report generation allowing user to analysis and tweak as necessory.</p>
             </div>
             <div class="col-lg-4">
                 <img src="@routes.Assets.at("images/intro03.png")" alt="">
                 <h3>Monitoring</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p>Forgot to start the task, No problems. SamayaPalak will ask you what to do with missing time.</p>
             </div>
         </div>
         <br>
@@ -108,13 +115,6 @@
 <div id="features">
     <div class="container">
         <div class="row">
-            <h1 class="centered">What's New?</h1>
-            <br>
-            <br>
-            <div class="col-lg-6 centered">
-                <img class="centered" src="@routes.Assets.at("images/mobile.png")" alt="">
-            </div>
-
             <div class="col-lg-6">
                 <h3>Some Features</h3>
                 <br>
@@ -219,7 +219,7 @@
         <div class="col-lg-5">
             <h3>Address</h3>
             <p>
-                16 Clerance Avenue,<br/>
+                19 Clerance Avenue,<br/>
                 Craighall Park,<br/>
                 Johannesburg - 3196<br/>
                 South Africa
@@ -232,7 +232,7 @@
             <form role="form" action="#" method="post" enctype="plain">
                 <div class="form-group">
                     <label for="name1">Your Name</label>
-                    <input type="name" name="Name" class="form-control" id="name1" placeholder="Your Name">
+                    <input type="name" name="Name" class="form-control" id="name1" placeholder="Enter Name">
                 </div>
                 <div class="form-group">
                     <label for="email1">Email address</label>
@@ -250,7 +250,6 @@
 </div>
 <div id="c">
     <div class="container">
-        <!--<p>Created by <a href="http://www.blacktie.co">BLACKTIE.CO</a></p>-->
         @content
     </div>
 </div>
